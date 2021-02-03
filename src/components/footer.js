@@ -61,7 +61,7 @@ const footer = () => {
               </ul>
             </div>
             <div className="col-6 col-md">
-              <h5>Resources</h5>
+              <h5>Services</h5>
               <ul className="list-unstyled text-small">
                 <li>
                   <a className="text-muted" href="#">

@@ -2,7 +2,9 @@
 import Navbar from './components/Navbar.js';
 import Home from './components/home.js';
 import Sidebar from './components/sidebar.js';
+import Paragraph from './components/bottom-footer.js';
 import Footer from './components/footer.js';
+import paragraph from './components/bottom-footer.js';
 
 
 // App function
@@ -19,6 +21,11 @@ function App() {
           <div className="col-4">
           <Sidebar />
           </div>
+        </div>
+        <div className="row">
+        <div className="col-6">
+         <Paragraph />
+        </div>
         </div>
       </div>
      
