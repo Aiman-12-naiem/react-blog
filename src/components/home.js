@@ -1,43 +1,25 @@
-const home = () => {
-  const handlebtn = (name) =>{
-    console.log(name);
-  }
-  // const handleShare = (name) => {
-  //   console.log('Hey' + name);
-  // }
-  const anotherShare = (name) => {
-    console.log('Hello from the other side ' + name);
-  }
-    return (
-        <div className="card mt-5">
-          <div className="card-header bg-dark">
-            <h3 className="text-light">Welcome to React!</h3>
-          </div>
-          <div className="card-body">
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique
-              voluptas esse vel minus cupiditate earum culpa quam inventore
-              accusantium rem impedit cumque quos et, tenetur eum quaerat
-              obcaecati consequuntur tempora.
-            </p>
-            <button className="btn btn-outline-dark" onClick={ handlebtn }>Share </button> 
-            {/* <button className="btn btn-outline-danger" onClick={ handleShare('Aiman') }>Share again</button>  */}
-            <button className="btn btn-outline-danger ml-2" onClick={ () => {
-              anotherShare('Aiman')
-            } }>Share again</button> 
-            
-          </div>
-          <div className="card-footer">
-            <p className="float-left">
-              Reposted <b>12</b>
-            </p>
-            <p className="float-right">
-              Replies <b>16</b>
-            </p>
-          </div>
-        </div>
- 
-      );
+import { useState, useEffect } from 'react';
+import PostList from './Post/PostList';
+import useFetch from '../useFetch';
+const Home = () => {
+  const uri = "http://localhost:8000/posts";
+  const { error, loading, posts } = useFetch(uri);
+  
+  return (
+    <div className="row">
+      <div className="col-md-8">
+        { error && <div class="alert alert-danger fade show mt-5" role="alert">
+          <strong>{ error }</strong>
+        </div> }
+        { loading && (<div className="mt-5 text-center">
+              <h3>Loading...</h3>
+            </div>) }
+        { posts && <PostList posts={posts} title="All Posts" /> }
+      </div>
+    </div>
+  );
 }
+export default Home;
 
-export default home;
+
+// My Name is Aiman Naiem

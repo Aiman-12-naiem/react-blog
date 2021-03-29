@@ -1,4 +1,4 @@
-const footer = () => {
+const Footer = () => {
     return (
         <footer className="container py-5 mt-5">
           <div className="row">
@@ -141,4 +141,4 @@ const footer = () => {
   }
 
  
-export default footer;
+export default Footer;

@@ -1,0 +1,11 @@
+{
+    "editor.cursorBlinking": "smooth",
+  "editor.cursorStyle": "block",
+  "editor.cursorSmoothCaretAnimation": true,
+  "workbench.colorCustomizations": {},
+  "editor.letterSpacing": 1,
+  "editor.fontFamily": "'Dank Mono'",
+  "editor.fontSize": 20,
+  "editor.fontLigatures": true,
+
+}
